@@ -18,6 +18,40 @@
     padding: 20px;
   }
 
+  /* Language Toggle */
+  .lang-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    background: #1a2740;
+    border-radius: 30px;
+    padding: 4px;
+    border: 1px solid rgba(0,230,118,0.3);
+    box-shadow: 0 0 20px rgba(0,230,118,0.15);
+  }
+
+  .lang-btn {
+    padding: 8px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #8899aa;
+  }
+
+  .lang-btn.active {
+    background: linear-gradient(135deg, #00e676, #00bcd4);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0,230,118,0.4);
+  }
+
   .pamphlet {
     width: 794px;
     min-height: 1123px;
@@ -29,7 +63,6 @@
     box-shadow: 0 0 80px rgba(0,200,100,0.15), 0 0 160px rgba(0,100,255,0.08);
   }
 
-  /* Background grid */
   .pamphlet::before {
     content: '';
     position: absolute;
@@ -41,7 +74,6 @@
     pointer-events: none;
   }
 
-  /* Top accent line */
   .top-bar {
     height: 5px;
     background: linear-gradient(90deg, #00e676, #00bcd4, #3d5afe, #00e676);
@@ -93,7 +125,6 @@
     opacity: 0.9;
   }
 
-  /* Hero section */
   .hero {
     margin: 0 50px 30px;
     background: linear-gradient(135deg, rgba(0,230,118,0.08), rgba(0,188,212,0.05));
@@ -123,9 +154,7 @@
     margin-bottom: 10px;
   }
 
-  .hero h2 span {
-    color: #00e676;
-  }
+  .hero h2 span { color: #00e676; }
 
   .hero p {
     font-size: 16px;
@@ -134,7 +163,6 @@
     max-width: 480px;
   }
 
-  /* Stats row */
   .stats {
     display: flex;
     gap: 0;
@@ -168,7 +196,6 @@
     margin-top: 4px;
   }
 
-  /* Content columns */
   .columns {
     display: flex;
     gap: 20px;
@@ -220,7 +247,6 @@
     margin-top: 2px;
   }
 
-  /* Pricing card */
   .pricing {
     margin: 0 50px 30px;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -235,7 +261,22 @@
   }
 
   .pricing::before {
-    content: 'LIMITED SEATS';
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: -35px;
+    background: #00e676;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 900;
+    padding: 5px 50px;
+    transform: rotate(35deg);
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  .pricing-ribbon {
     position: absolute;
     top: 18px;
     right: -35px;
@@ -279,39 +320,39 @@
   }
 
   .price-features {
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 80px;
   }
 
   .feat-item {
+    background: rgba(0,230,118,0.08);
+    border: 1px solid rgba(0,230,118,0.2);
+    border-radius: 4px;
+    padding: 8px 16px;
     font-size: 14px;
-    color: #aab;
-    margin-bottom: 6px;
-    font-weight: 600;
-  }
-
-  .feat-item::before {
-    content: '✓ ';
     color: #00e676;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
 
-  /* Mode tags */
   .modes {
     display: flex;
-    gap: 12px;
+    gap: 15px;
     margin: 0 50px 30px;
   }
 
   .mode-tag {
     flex: 1;
     text-align: center;
-    padding: 14px;
-    border: 1px solid rgba(255,255,255,0.1);
+    padding: 16px 10px;
     border-radius: 4px;
+    border: 1px solid;
     font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
     font-weight: 700;
-    font-size: 18px;
     letter-spacing: 2px;
-    color: #ccd;
     text-transform: uppercase;
     background: rgba(255,255,255,0.02);
   }
@@ -325,7 +366,6 @@
   .mode-tag.online { border-color: rgba(0,188,212,0.4); color: #00bcd4; }
   .mode-tag.offline { border-color: rgba(0,230,118,0.4); color: #00e676; }
 
-  /* CTA Footer */
   .cta {
     margin: 0 50px 40px;
     background: linear-gradient(135deg, rgba(0,230,118,0.12), rgba(0,188,212,0.08));
@@ -350,9 +390,7 @@
     margin-top: 4px;
   }
 
-  .contact-info {
-    text-align: right;
-  }
+  .contact-info { text-align: right; }
 
   .contact-item {
     font-size: 16px;
@@ -418,7 +456,6 @@
     background: linear-gradient(90deg, #3d5afe, #00bcd4, #00e676);
   }
 
-  /* Disclaimer */
   .disclaimer {
     text-align: center;
     padding: 10px 50px 20px;
@@ -429,113 +466,150 @@
 </style>
 </head>
 <body>
+
+<!-- Language Toggle Button -->
+<div class="lang-toggle">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" id="btn-mr" onclick="setLang('mr')">MR</button>
+</div>
+
 <div class="pamphlet">
   <div class="top-bar"></div>
 
   <div class="header">
     <div class="institute-name">MONEY<br>ASSURE</div>
-    <div class="tagline">⚡ Invest Smart. Trade Confidently. Grow Assured.</div>
+    <div class="tagline" data-en="⚡ Invest Smart. Trade Confidently. Grow Assured." data-mr="⚡ हुशारीने गुंतवा. आत्मविश्वासाने व्यापार करा. निश्चिंतपणे वाढा.">⚡ Invest Smart. Trade Confidently. Grow Assured.</div>
   </div>
 
   <div class="hero">
-    <div style="display:inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: #000; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 900; padding: 8px 20px; border-radius: 4px; margin-bottom: 15px; letter-spacing: 1px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);">
+    <div style="display:inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: #000; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 900; padding: 8px 20px; border-radius: 4px; margin-bottom: 15px; letter-spacing: 1px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);"
+      data-en="💰 DAILY ₹500 SE ₹1000 KAMAO! 💰"
+      data-mr="💰 रोज ₹500 ते ₹1000 कमवा! 💰">
       💰 DAILY ₹500 SE ₹1000 KAMAO! 💰
     </div>
-    <h2>BASICS SE <span>ADVANCED</span> TAK —<br>MONEY ASSURE KE SAATH</h2>
-    <p>Chahe aap pehli baar market mein aaye ho — yahan se Basics, Technical Analysis, Options Trading aur Intraday/Swing Trading sab seekhoge. Practical training, live market sessions, aur guaranteed clarity.</p>
+    <h2 data-en="BASICS SE <span>ADVANCED</span> TAK —<br>MONEY ASSURE KE SAATH" data-mr="बेसिक ते <span>ॲडव्हान्स</span> पर्यंत —<br>MONEY ASSURE सोबत">BASICS SE <span>ADVANCED</span> TAK —<br>MONEY ASSURE KE SAATH</h2>
+    <p data-en="Chahe aap pehli baar market mein aaye ho — yahan se Basics, Technical Analysis, Options Trading aur Intraday/Swing Trading sab seekhoge. Practical training, live market sessions, aur guaranteed clarity."
+       data-mr="तुम्ही पहिल्यांदाच मार्केटमध्ये येत असाल तरी चालेल — इथे Basics, Technical Analysis, Options Trading आणि Intraday/Swing Trading सगळं शिकाल. Practical Training, Live Market Sessions आणि संपूर्ण स्पष्टता मिळेल.">
+      Chahe aap pehli baar market mein aaye ho — yahan se Basics, Technical Analysis, Options Trading aur Intraday/Swing Trading sab seekhoge. Practical training, live market sessions, aur guaranteed clarity.
+    </p>
   </div>
 
   <div class="stats">
     <div class="stat" style="border-radius:4px 0 0 4px;">
       <span class="stat-num">3</span>
-      <div class="stat-label">Months Duration</div>
+      <div class="stat-label" data-en="Months Duration" data-mr="महिने कालावधी">Months Duration</div>
     </div>
     <div class="stat">
       <span class="stat-num">12</span>
-      <div class="stat-label">Modules</div>
+      <div class="stat-label" data-en="Modules" data-mr="मॉड्युल्स">Modules</div>
     </div>
     <div class="stat" style="border-radius:0 4px 4px 0;">
       <span class="stat-num">24/7</span>
-      <div class="stat-label">Support</div>
+      <div class="stat-label" data-en="Support" data-mr="सपोर्ट">Support</div>
     </div>
   </div>
 
   <div class="columns">
     <div class="col-left" style="flex:1;">
-      <div class="section-title">📚 Course Mein Kya Sikhoge</div>
+      <div class="section-title" data-en="📚 Course Mein Kya Sikhoge" data-mr="📚 कोर्समध्ये काय शिकाल">📚 Course Mein Kya Sikhoge</div>
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 30px;">
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Stock Market Basics
-          <small>NSE, BSE, Shares kya hoti hai, Demat Account</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Technical Analysis
-          <small>Charts, Candlesticks, Support & Resistance</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Fundamental Analysis
-          <small>P/E Ratio, Balance Sheet, Financial Statements</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Options Trading (F&O)
-          <small>Call, Put, Strategies: Straddle, Iron Condor</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Intraday & Swing Trading
-          <small>Entry/Exit rules, Stop Loss, Risk Management</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Market Psychology
-          <small>Fear & Greed, Behavioral Finance, Emotions</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Risk Management Strategies
-          <small>Position Hedging, Diversification, Capital Allocation</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Portfolio Management
-          <small>Asset Allocation, Rebalancing, Performance Tracking</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Trading Psychology
-          <small>Discipline, Patience, Overcoming Losses</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Position Sizing
-          <small>How much to invest, Lot size calculation</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Sector Analysis
-          <small>Banking, IT, Pharma, Auto sector research</small>
-        </p>
-      </div>
-      <div class="topic-item">
-        <div class="dot"></div>
-        <p>Live Market Practice Sessions
-          <small>Real trades, paper trading, live analysis</small>
-        </p>
-      </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Stock Market Basics<small>NSE, BSE, Shares kya hoti hai, Demat Account</small>"
+             data-mr="शेअर मार्केट बेसिक्स<small>NSE, BSE, शेअर्स म्हणजे काय, Demat Account</small>">
+            Stock Market Basics<small>NSE, BSE, Shares kya hoti hai, Demat Account</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Technical Analysis<small>Charts, Candlesticks, Support & Resistance</small>"
+             data-mr="तांत्रिक विश्लेषण<small>Charts, Candlesticks, Support & Resistance</small>">
+            Technical Analysis<small>Charts, Candlesticks, Support & Resistance</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Fundamental Analysis<small>P/E Ratio, Balance Sheet, Financial Statements</small>"
+             data-mr="मूलभूत विश्लेषण<small>P/E Ratio, Balance Sheet, आर्थिक अहवाल</small>">
+            Fundamental Analysis<small>P/E Ratio, Balance Sheet, Financial Statements</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Options Trading (F&amp;O)<small>Call, Put, Strategies: Straddle, Iron Condor</small>"
+             data-mr="ऑप्शन्स ट्रेडिंग (F&amp;O)<small>Call, Put, Strategies: Straddle, Iron Condor</small>">
+            Options Trading (F&amp;O)<small>Call, Put, Strategies: Straddle, Iron Condor</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Intraday & Swing Trading<small>Entry/Exit rules, Stop Loss, Risk Management</small>"
+             data-mr="इंट्राडे & स्विंग ट्रेडिंग<small>Entry/Exit नियम, Stop Loss, जोखीम व्यवस्थापन</small>">
+            Intraday & Swing Trading<small>Entry/Exit rules, Stop Loss, Risk Management</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Market Psychology<small>Fear & Greed, Behavioral Finance, Emotions</small>"
+             data-mr="मार्केट मानसशास्त्र<small>भीती & लोभ, Behavioral Finance, भावनांवर नियंत्रण</small>">
+            Market Psychology<small>Fear & Greed, Behavioral Finance, Emotions</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Risk Management Strategies<small>Position Hedging, Diversification, Capital Allocation</small>"
+             data-mr="जोखीम व्यवस्थापन<small>Position Hedging, Diversification, Capital Allocation</small>">
+            Risk Management Strategies<small>Position Hedging, Diversification, Capital Allocation</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Portfolio Management<small>Asset Allocation, Rebalancing, Performance Tracking</small>"
+             data-mr="पोर्टफोलिओ व्यवस्थापन<small>Asset Allocation, Rebalancing, Performance Tracking</small>">
+            Portfolio Management<small>Asset Allocation, Rebalancing, Performance Tracking</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Trading Psychology<small>Discipline, Patience, Overcoming Losses</small>"
+             data-mr="ट्रेडिंग मानसशास्त्र<small>शिस्त, संयम, नुकसानावर मात</small>">
+            Trading Psychology<small>Discipline, Patience, Overcoming Losses</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Position Sizing<small>How much to invest, Lot size calculation</small>"
+             data-mr="पोझिशन साइझिंग<small>किती गुंतवायचे, Lot Size गणना</small>">
+            Position Sizing<small>How much to invest, Lot size calculation</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Sector Analysis<small>Banking, IT, Pharma, Auto sector research</small>"
+             data-mr="सेक्टर विश्लेषण<small>Banking, IT, Pharma, Auto सेक्टर संशोधन</small>">
+            Sector Analysis<small>Banking, IT, Pharma, Auto sector research</small>
+          </p>
+        </div>
+
+        <div class="topic-item">
+          <div class="dot"></div>
+          <p data-en="Live Market Practice Sessions<small>Real trades, paper trading, live analysis</small>"
+             data-mr="Live मार्केट सराव सत्र<small>Real trades, paper trading, live analysis</small>">
+            Live Market Practice Sessions<small>Real trades, paper trading, live analysis</small>
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -543,34 +617,35 @@
   <div class="modes">
     <div class="mode-tag online">
       <span class="icon">💻</span>
-      Online Classes
+      <span data-en="Online Classes" data-mr="ऑनलाइन क्लासेस">Online Classes</span>
     </div>
     <div class="mode-tag offline">
       <span class="icon">🏫</span>
-      Offline Classes
+      <span data-en="Offline Classes" data-mr="ऑफलाइन क्लासेस">Offline Classes</span>
     </div>
   </div>
 
   <div class="pricing">
+    <div class="pricing-ribbon" id="ribbon-text">LIMITED SEATS</div>
     <div class="price-left">
-      <h3>Total Course Fee</h3>
+      <h3 data-en="Total Course Fee" data-mr="एकूण कोर्स फी">Total Course Fee</h3>
       <div class="price-amount"><sup>₹</sup>30,000</div>
     </div>
     <div class="price-features">
-      <div class="feat-item">1-on-1 Mentorship</div>
-      <div class="feat-item">WhatsApp Support Group</div>
+      <div class="feat-item" data-en="1-on-1 Mentorship" data-mr="1-on-1 मार्गदर्शन">1-on-1 Mentorship</div>
+      <div class="feat-item" data-en="WhatsApp Support Group" data-mr="WhatsApp सपोर्ट ग्रुप">WhatsApp Support Group</div>
     </div>
   </div>
 
   <div class="cta">
     <div class="cta-left">
-      <h3>🚀 MONEY ASSURE — ABHI ENROLL KARO!</h3>
-      <p>Next batch starting soon • Early Bird discount available</p>
+      <h3 data-en="🚀 MONEY ASSURE — ABHI ENROLL KARO!" data-mr="🚀 MONEY ASSURE — आत्ताच नाव नोंदवा!">🚀 MONEY ASSURE — ABHI ENROLL KARO!</h3>
+      <p data-en="Next batch starting soon • Early Bird discount available" data-mr="पुढील बॅच लवकरच सुरू होणार • Early Bird सूट उपलब्ध">Next batch starting soon • Early Bird discount available</p>
     </div>
     <div class="contact-info">
       <div class="contact-item"><span>📞</span>+91 93262 37560</div>
       <div class="contact-item"><span>🌐</span>moneyassure.netlify.app</div>
-      <div class="contact-item"><span>📍</span>Taloja Phase 2</div>
+      <div class="contact-item"><span>📍</span><span data-en="Taloja Phase 2" data-mr="तळोजा फेज 2">Taloja Phase 2</span></div>
       <div class="contact-item"><span>📱</span>@money_assure</div>
       <div class="contact-item"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display:inline-block;vertical-align:middle;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.84 8.673c-.138.613-.5.76-1.016.473l-2.807-2.069-1.353 1.301c-.15.15-.275.275-.563.275l.2-2.836 5.177-4.677c.225-.2-.05-.312-.35-.112l-6.396 4.026-2.756-.863c-.6-.188-.612-.6.125-.888l10.766-4.153c.5-.188.937.112.775.888z" fill="#00e676"/></svg></span>t.me/+DCudISZsbgk1ZmU9</div>
     </div>
@@ -578,18 +653,48 @@
 
   <div class="social-bar">
     <a href="https://www.instagram.com/money_assure" class="social-link insta">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:inline-block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="white"/></svg> <span>@money_assure</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="white"/></svg>
+      <span data-en="@money_assure" data-mr="@money_assure">@money_assure</span>
     </a>
     <a href="https://t.me/+DCudISZsbgk1ZmU9" class="social-link tele">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:inline-block;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.84 8.673c-.138.613-.5.76-1.016.473l-2.807-2.069-1.353 1.301c-.15.15-.275.275-.563.275l.2-2.836 5.177-4.677c.225-.2-.05-.312-.35-.112l-6.396 4.026-2.756-.863c-.6-.188-.612-.6.125-.888l10.766-4.153c.5-.188.937.112.775.888z" fill="white"/></svg> <span>Join Telegram Channel</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.84 8.673c-.138.613-.5.76-1.016.473l-2.807-2.069-1.353 1.301c-.15.15-.275.275-.563.275l.2-2.836 5.177-4.677c.225-.2-.05-.312-.35-.112l-6.396 4.026-2.756-.863c-.6-.188-.612-.6.125-.888l10.766-4.153c.5-.188.937.112.775.888z" fill="white"/></svg>
+      <span data-en="Join Telegram Channel" data-mr="Telegram Channel जॉइन करा">Join Telegram Channel</span>
     </a>
     <a href="https://moneyassure.netlify.app/" target="_blank" class="social-link website">
-      🌐 <span>Visit Website</span>
+      🌐 <span data-en="Visit Website" data-mr="वेबसाइट पहा">Visit Website</span>
     </a>
   </div>
 
   <div class="bottom-bar"></div>
-  <div class="disclaimer">*Terms & Conditions apply. Stock market investments are subject to market risks. This course is for educational purposes only.</div>
+  <div class="disclaimer"
+    data-en="*Terms & Conditions apply. Stock market investments are subject to market risks. This course is for educational purposes only."
+    data-mr="*अटी व शर्ती लागू. शेअर बाजारातील गुंतवणूक बाजार जोखमींच्या अधीन आहे. हा कोर्स केवळ शैक्षणिक उद्देशांसाठी आहे.">
+    *Terms & Conditions apply. Stock market investments are subject to market risks. This course is for educational purposes only.
+  </div>
 </div>
+
+<script>
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+
+    // Toggle button styles
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-mr').classList.toggle('active', lang === 'mr');
+
+    // Update ribbon
+    const ribbon = document.getElementById('ribbon-text');
+    ribbon.textContent = lang === 'mr' ? 'मर्यादित जागा' : 'LIMITED SEATS';
+
+    // Update all elements with data-en / data-mr
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text) {
+        el.innerHTML = text;
+      }
+    });
+  }
+</script>
 </body>
 </html>
