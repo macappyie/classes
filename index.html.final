@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>शेअर बाजार कोर्स पत्रक</title>
+<title>Stock Market Course Pamphlet</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -434,106 +434,106 @@
 
   <div class="header">
     <div class="institute-name">MONEY<br>ASSURE</div>
-    <div class="tagline">⚡ स्मार्ट गुंतवणूक. आत्मविश्वासाने ट्रेड. निश्चितपणे वाढा.</div>
+    <div class="tagline">⚡ Invest Smart. Trade Confidently. Grow Assured.</div>
   </div>
 
   <div class="hero">
     <div style="display:inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: #000; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 900; padding: 8px 20px; border-radius: 4px; margin-bottom: 15px; letter-spacing: 1px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);">
-      💰 रोज ₹500 ते ₹1000 कमवा! 💰
+      💰 DAILY ₹500 SE ₹1000 KAMAO! 💰
     </div>
-    <h2>बेसिक्स ते <span>अॅडव्हान्स्ड</span> पर्यंत —<br>मनी अश्योर सोबत</h2>
-    <p>तुम्ही पहिल्यांदा मार्केटमध्ये आला असाल तरी काही हरकत नाही — इथे बेसिक्स, टेक्निकल अॅनालिसिस, ऑप्शन्स ट्रेडिंग आणि इंट्राडे/स्विंग ट्रेडिंग सगळं शिकाल. व्यावहारिक प्रशिक्षण, लाइव्ह मार्केट सेशन्स आणि पूर्ण स्पष्टता.</p>
+    <h2>BASICS SE <span>ADVANCED</span> TAK —<br>MONEY ASSURE KE SAATH</h2>
+    <p>Chahe aap pehli baar market mein aaye ho — yahan se Basics, Technical Analysis, Options Trading aur Intraday/Swing Trading sab seekhoge. Practical training, live market sessions, aur guaranteed clarity.</p>
   </div>
 
   <div class="stats">
     <div class="stat" style="border-radius:4px 0 0 4px;">
       <span class="stat-num">3</span>
-      <div class="stat-label">महिन्यांचा कालावधी</div>
+      <div class="stat-label">Months Duration</div>
     </div>
     <div class="stat">
       <span class="stat-num">12</span>
-      <div class="stat-label">मॉड्यूल्स</div>
+      <div class="stat-label">Modules</div>
     </div>
     <div class="stat" style="border-radius:0 4px 4px 0;">
       <span class="stat-num">24/7</span>
-      <div class="stat-label">सपोर्ट</div>
+      <div class="stat-label">Support</div>
     </div>
   </div>
 
   <div class="columns">
     <div class="col-left" style="flex:1;">
-      <div class="section-title">📚 कोर्समध्ये काय शिकाल</div>
+      <div class="section-title">📚 Course Mein Kya Sikhoge</div>
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 30px;">
       <div class="topic-item">
         <div class="dot"></div>
-        <p>स्टॉक मार्केट बेसिक्स
-          <small>NSE, BSE, शेअर्स काय आहेत, डिमॅट अकाउंट</small>
+        <p>Stock Market Basics
+          <small>NSE, BSE, Shares kya hoti hai, Demat Account</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>टेक्निकल अॅनालिसिस
-          <small>चार्ट्स, कॅंडलस्टिक्स, सपोर्ट आणि रेझिस्टन्स</small>
+        <p>Technical Analysis
+          <small>Charts, Candlesticks, Support & Resistance</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>फंडामेंटल अॅनालिसिस
-          <small>P/E रेशो, बॅलन्स शीट, आर्थिक विवरण</small>
+        <p>Fundamental Analysis
+          <small>P/E Ratio, Balance Sheet, Financial Statements</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>ऑप्शन्स ट्रेडिंग (F&O)
-          <small>कॉल, पुट, स्ट्रॅटेजीज: स्ट्रॅडल, आयर्न कॉन्डोर</small>
+        <p>Options Trading (F&O)
+          <small>Call, Put, Strategies: Straddle, Iron Condor</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>इंट्राडे आणि स्विंग ट्रेडिंग
-          <small>एंट्री/एक्झिट नियम, स्टॉप लॉस, रिस्क मॅनेजमेंट</small>
+        <p>Intraday & Swing Trading
+          <small>Entry/Exit rules, Stop Loss, Risk Management</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>मार्केट सायकॉलॉजी
-          <small>भीती आणि लोभ, वर्तणूक अर्थशास्त्र, भावना</small>
+        <p>Market Psychology
+          <small>Fear & Greed, Behavioral Finance, Emotions</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>रिस्क मॅनेजमेंट स्ट्रॅटेजीज
-          <small>पोझिशन हेजिंग, विविधीकरण, भांडवल वाटप</small>
+        <p>Risk Management Strategies
+          <small>Position Hedging, Diversification, Capital Allocation</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>पोर्टफोलिओ मॅनेजमेंट
-          <small>मालमत्ता वाटप, रिबॅलन्सिंग, कामगिरी ट्रॅकिंग</small>
+        <p>Portfolio Management
+          <small>Asset Allocation, Rebalancing, Performance Tracking</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>ट्रेडिंग सायकॉलॉजी
-          <small>शिस्त, धैर्य, तोट्यावर मात करणे</small>
+        <p>Trading Psychology
+          <small>Discipline, Patience, Overcoming Losses</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>पोझिशन सायझिंग
-          <small>किती गुंतवायचे, लॉट साइज गणना</small>
+        <p>Position Sizing
+          <small>How much to invest, Lot size calculation</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>सेक्टर अॅनालिसिस
-          <small>बँकिंग, IT, फार्मा, ऑटो सेक्टर संशोधन</small>
+        <p>Sector Analysis
+          <small>Banking, IT, Pharma, Auto sector research</small>
         </p>
       </div>
       <div class="topic-item">
         <div class="dot"></div>
-        <p>लाइव्ह मार्केट प्रॅक्टिस सेशन्स
-          <small>रिअल ट्रेड्स, पेपर ट्रेडिंग, लाइव्ह विश्लेषण</small>
+        <p>Live Market Practice Sessions
+          <small>Real trades, paper trading, live analysis</small>
         </p>
       </div>
       </div>
@@ -543,29 +543,29 @@
   <div class="modes">
     <div class="mode-tag online">
       <span class="icon">💻</span>
-      ऑनलाइन क्लासेस
+      Online Classes
     </div>
     <div class="mode-tag offline">
       <span class="icon">🏫</span>
-      ऑफलाइन क्लासेस
+      Offline Classes
     </div>
   </div>
 
   <div class="pricing">
     <div class="price-left">
-      <h3>एकूण कोर्स फी</h3>
+      <h3>Total Course Fee</h3>
       <div class="price-amount"><sup>₹</sup>30,000</div>
     </div>
     <div class="price-features">
-      <div class="feat-item">1-on-1 मेंटरशिप</div>
-      <div class="feat-item">व्हॉट्सअॅप सपोर्ट ग्रुप</div>
+      <div class="feat-item">1-on-1 Mentorship</div>
+      <div class="feat-item">WhatsApp Support Group</div>
     </div>
   </div>
 
   <div class="cta">
     <div class="cta-left">
-      <h3>🚀 मनी अश्योर — आत्ताच एनरोल व्हा!</h3>
-      <p>पुढील बॅच लवकरच सुरू होणार • अर्ली बर्ड डिस्काउंट उपलब्ध</p>
+      <h3>🚀 MONEY ASSURE — ABHI ENROLL KARO!</h3>
+      <p>Next batch starting soon • Early Bird discount available</p>
     </div>
     <div class="contact-info">
       <div class="contact-item"><span>📞</span>+91 93262 37560</div>
@@ -581,15 +581,15 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:inline-block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="white"/></svg> <span>@money_assure</span>
     </a>
     <a href="https://t.me/+DCudISZsbgk1ZmU9" class="social-link tele">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:inline-block;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.84 8.673c-.138.613-.5.76-1.016.473l-2.807-2.069-1.353 1.301c-.15.15-.275.275-.563.275l.2-2.836 5.177-4.677c.225-.2-.05-.312-.35-.112l-6.396 4.026-2.756-.863c-.6-.188-.612-.6.125-.888l10.766-4.153c.5-.188.937.112.775.888z" fill="white"/></svg> <span>टेलिग्राम चॅनेल जॉइन करा</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:inline-block;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.84 8.673c-.138.613-.5.76-1.016.473l-2.807-2.069-1.353 1.301c-.15.15-.275.275-.563.275l.2-2.836 5.177-4.677c.225-.2-.05-.312-.35-.112l-6.396 4.026-2.756-.863c-.6-.188-.612-.6.125-.888l10.766-4.153c.5-.188.937.112.775.888z" fill="white"/></svg> <span>Join Telegram Channel</span>
     </a>
     <a href="https://moneyassure.netlify.app/" target="_blank" class="social-link website">
-      🌐 <span>वेबसाइट भेट द्या</span>
+      🌐 <span>Visit Website</span>
     </a>
   </div>
 
   <div class="bottom-bar"></div>
-  <div class="disclaimer">*अटी व शर्ती लागू. शेअर बाजार गुंतवणूक बाजार जोखमीच्या अधीन आहे. हा कोर्स केवळ शैक्षणिक हेतूंसाठी आहे.</div>
+  <div class="disclaimer">*Terms & Conditions apply. Stock market investments are subject to market risks. This course is for educational purposes only.</div>
 </div>
 </body>
 </html>
